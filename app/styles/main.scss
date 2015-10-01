@@ -1,0 +1,118 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+// Bootstrap override
+.row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+a {
+  color: #37A7D6;
+  &:hover {
+    color: #2f9ac4;
+  }
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+.btn {
+  padding: 6px 30px;
+}
+
+.btn-storm {
+  background: #444;
+  color: #fff;
+  &:hover {
+    background: #333;
+    color: #fff;
+  }
+}
+
+.btn-upload {
+  border: 1px dashed #000;
+  margin-left: 10px;
+  &:hover {
+    background: #CFD3D6;
+  }
+}
+
+// Custom styling
+
+nav {
+  padding: 15px 30px;
+}
+
+
+.case-container {
+  padding: 10px;
+  &:hover {
+    cursor: hand;
+    cursor: pointer;
+  }
+  .inner-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #F5F7F9;
+    img {
+      width: 100%;
+    }
+  }
+  .description {
+    background: #fff;
+    font-weight: 600;
+    padding: 7px 10px;
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+.more-cases-container {
+  .show-toggle {
+    text-align: right;
+    padding: 10px;
+    cursor: hand;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.getting-started {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.custom-project-container {
+  textarea {
+    height: 100px;
+  }
+  .input-container {
+    background: #F5F7F9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.character-count {
+  text-align: right;
+  .error-message {
+    color: #F44336;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,83 @@
+<div class="introduction">
+  <h1>Welcome to Crowdflower</h1>
+  <p class="lead">
+    Get familiar with us by creating your first Crowdflower job.
+  </p>
+</div>
+
+<div class="main-cases-container">
+  <h2>What would you like to do?</h2>
+  <div class="row">
+    <div class="case-container col-xs-6 col-sm-3" ng-repeat="case in useCases.main">
+      <div class="inner-container">
+        <img class="use-case-image" src="images/use_case_{{case}}_2x.png">
+        <div class="description">
+          {{case}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="more-cases-container">
+  <div class="show-toggle" ng-click="showMore()" ng-hide="showAllUseCases">
+    Show More <span class="glyphicon glyphicon-triangle-bottom"></span>
+  </div>
+
+  <div class="row" ng-show="showAllUseCases">
+    <div class="case-container col-xs-6 col-sm-3" ng-repeat="case in useCases.other">
+      <div class="inner-container">
+        <img class="use-case-image" src="images/use_case_{{case}}_2x.png">
+        <div class="description">
+          {{case}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="show-toggle" ng-click="showMore()" ng-show="showAllUseCases">
+    Show Less <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+  </div>
+</div> 
+
+
+<div class="custom-project-container">
+  <div class="row">
+    
+    <div class="getting-started col-sm-3">
+      <h2>Need help getting started?</h2>
+      <ul>
+        <li><a href="#">Read help docs</a></li>
+        <li><a href="#">View example case studies</a></li>
+        <li><a href="#">Watch training videos</a></li>
+      </ul>
+    </div> <!-- .col-sm-3 -->
+
+    <div class="col-sm-9">
+      <h2>Don't see what you're looking for?</h2>
+      <p>Tell us about your data needs and we'll get back to you a recommendation</p>
+      <div class="inner-container">
+        <div class="input-container">
+          <form name="form" class="form-group">
+            <textarea class="form-control" ng-model="descriptionModel" ng-change="inputUpdate()" placeholder="Describe your data goals in a short summary"></textarea>
+          </form> <!-- .form-group -->
+          <div class="character-count">
+            <span class="error-message" ng-show="showMaxErrorMessage">
+              Max characters exceeded.
+            </span>
+            {{characterCount}} / 140 characters
+          </div>
+          
+          <div class="upload-container">
+            <h3>Attach a sample of your data (optional)</h3>
+            <button class="btn btn-storm">Upload File</button>
+            <div class="btn btn-upload">or drop files here</div>
+          </div> <!-- .upload-container -->
+        </div> <!-- .input-container -->
+        <button class="btn btn-info pull-right" type="submit" ng-disabled="form.$pristine || maxCharacters">Send</button>
+      </div> <!-- .inner-container -->
+
+    </div> <!-- .col-sm-9 -->
+
+  </div> <!-- .row -->
+</div> <!-- .additional-help -->
